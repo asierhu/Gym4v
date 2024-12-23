@@ -1,0 +1,34 @@
+// Variables
+$color-text-default: gray;
+$color-text-active: red;
+$color-line-default: transparent;
+$color-line-active: red;
+$transition-speed: 0.3s;
+
+// Estructura de las opciones
+.option {
+  position: relative;
+  cursor: pointer;
+  color: $color-text-default; // Color del texto inicial
+
+  // Línea superior
+  .line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: $color-line-default; // Línea oculta por defecto
+    transition: background-color $transition-speed ease;
+  }
+
+  // Estado activo
+  &.active {
+    color: $color-text-active; // Texto rojo
+
+    .line {
+      background-color: $color-line-active; // Línea roja visible
+    }
+  }
+
+}

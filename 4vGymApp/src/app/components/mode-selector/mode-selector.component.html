@@ -1,11 +1,13 @@
-<div class="container text-center mt-5 fixed-bottom">
+<div class="container text-center fixed-bottom h-auto ">
     <!-- Opción Actividades -->
-    <div class="row">
-        <div class="col" [class.active]="isActividades" (click)="selectOption('actividades')">
+    <div class="row text-secondary fs-1">
+        <div class="col option" [class.active]="isActividades" (click)="selectOption('actividades')">
+            <div class="line"></div>
             <i class="icon bi bi-calendar"></i>
             <span> ACTIVIDADES</span>
         </div>
-        <div class="col" [class.active]="!isActividades" (click)="selectOption('monitores')">
+        <div class="col option" [class.active]="!isActividades" (click)="selectOption('monitores')">
+            <div class="line"></div>
             <i class="icon bi bi-person-fill"></i>
             <span> MONITORES</span>
         </div>
