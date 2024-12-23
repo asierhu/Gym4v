@@ -1,1 +1,20 @@
+<!-- Navbar compoenent for all pages -->
 <app-navbar></app-navbar>
+
+<div class="container text-center mt-5 ">
+
+    <!-- Dynamic content -->
+
+    <!-- If currentOption is 'actividades', show the calendar -->
+    <div *ngIf="currentOption === 'actividades'">
+        <app-calendar></app-calendar>
+    </div>
+
+    <!-- If currentOption is 'monitores', show the calendar -->
+    <div *ngIf="currentOption === 'monitores'">
+
+    </div>
+</div>
+
+<!-- Tab selector as footer of all pages -->
+<app-mode-selector (optionSelected)="onOptionSelected($event)"></app-mode-selector>

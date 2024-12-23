@@ -1,1 +1,13 @@
-<p>mode-selector works!</p>
+<div class="container text-center mt-5 fixed-bottom">
+    <!-- Opción Actividades -->
+    <div class="row">
+        <div class="col" [class.active]="isActividades" (click)="selectOption('actividades')">
+            <i class="icon bi bi-calendar"></i>
+            <span> ACTIVIDADES</span>
+        </div>
+        <div class="col" [class.active]="!isActividades" (click)="selectOption('monitores')">
+            <i class="icon bi bi-person-fill"></i>
+            <span> MONITORES</span>
+        </div>
+    </div>
+</div>
