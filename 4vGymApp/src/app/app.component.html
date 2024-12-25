@@ -4,10 +4,18 @@
 <div class="container text-center mt-5 ">
 
     <!-- Dynamic content -->
-
     <!-- If currentOption is 'actividades', show the calendar -->
     <div *ngIf="currentOption === 'actividades'">
-        <app-calendar></app-calendar>
+        <div class="row">
+            <div class="col-4">
+                <app-calendar></app-calendar>
+            </div>
+            <div class="col-8">
+                <app-activity-list></app-activity-list>
+            </div>
+        </div>
+        
+        
     </div>
 
     <!-- If currentOption is 'monitores', show the calendar -->
@@ -18,3 +26,4 @@
 
 <!-- Tab selector as footer of all pages -->
 <app-mode-selector (optionSelected)="onOptionSelected($event)"></app-mode-selector>
+

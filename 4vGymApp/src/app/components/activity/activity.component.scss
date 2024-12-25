@@ -1,0 +1,15 @@
+.actividad-card {
+    transition: transform 0.2s ease-in-out;
+
+    &:hover {
+        transform: scale(1.02);
+    }
+
+    .icon {
+        font-size: 1.5rem;
+    }
+
+    .actions button {
+        font-size: 0.9rem;
+    }
+}

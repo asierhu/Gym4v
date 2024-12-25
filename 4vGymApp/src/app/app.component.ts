@@ -4,11 +4,12 @@ import { NavbarComponent } from "./components/navbar/navbar.component";
 import { CommonModule } from '@angular/common';
 import { ModeSelectorComponent } from "./components/mode-selector/mode-selector.component";
 import { CalendarComponent } from "./components/calendar/calendar.component";
+import { ActivityListComponent } from "./components/activity-list/activity-list.component";
 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, NavbarComponent, CommonModule, ModeSelectorComponent, CalendarComponent],
+  imports: [NavbarComponent, CommonModule, ModeSelectorComponent, CalendarComponent, ActivityListComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

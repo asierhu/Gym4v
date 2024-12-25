@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Victor+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
 // Variables
 $color-text-default: gray;
 $color-text-active: red;
@@ -6,10 +8,16 @@ $color-line-active: red;
 $transition-speed: 0.3s;
 
 // Estructura de las opciones
+
+
 .option {
   position: relative;
   cursor: pointer;
-  color: $color-text-default; // Color del texto inicial
+  color: $color-text-default;
+  font-family: 'Roboto Mono', monospace;
+  padding: 15px;
+  box-sizing: border-box; /* Incluye padding en el tamaño total */
+  z-index: 1; /* Asegura que no se superponga visualmente */
 
   // Línea superior
   .line {
@@ -17,7 +25,7 @@ $transition-speed: 0.3s;
     top: 0;
     left: 0;
     width: 100%;
-    height: 4px;
+    height: 7px;
     background-color: $color-line-default; // Línea oculta por defecto
     transition: background-color $transition-speed ease;
   }
