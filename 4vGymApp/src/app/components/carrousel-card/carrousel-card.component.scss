@@ -1,0 +1,23 @@
+.custom-card {
+    background-color: #f2f2f2;
+    border: none;
+    padding: 20px;
+    text-align: center;
+    width: 18rem;
+    margin: 0 auto;
+}
+.custom-card .icon {
+    font-size: 50px;
+    color: #d9534f;
+    margin-bottom: 15px;
+}
+.custom-card .action-icons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.custom-card .action-icons i {
+    color: #d9534f;
+    font-size: 20px;
+    cursor: pointer;
+}

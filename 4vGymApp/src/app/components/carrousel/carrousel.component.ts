@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { CarrouselCardComponent } from "../carrousel-card/carrousel-card.component";
 
 @Component({
   selector: 'app-carrousel',
-  imports: [],
+  imports: [CarrouselCardComponent],
   templateUrl: './carrousel.component.html',
   styleUrl: './carrousel.component.scss'
 })
