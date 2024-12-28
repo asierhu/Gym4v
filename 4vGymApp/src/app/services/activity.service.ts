@@ -9,21 +9,27 @@ export class ActivityService {
 
   private actividades: Activity[] = [
     { 
-      horario: "10:00-11:30",
+      id: 1,
+      fechaInicio: "10:00",
+      fechaFinal: "11:30",
       date: "10/08/2014 00:00", 
       monitor: ["Miguel Goyena"], 
       type: "BodyPump"
     },
 
     { 
-      horario: "13:30-15:00",
+      id: 2,
+      fechaInicio: "13:30",
+      fechaFinal: "15:00",
       date: "12/09/2022 00:00", 
-      monitor: ["Miguel Goyena"], 
-      type: "Pilates"
+      monitor: [], 
+      type: "FREE"
     },
 
     { 
-      horario: "17:30-19:00",
+      id: 3,
+      fechaInicio: "17:30",
+      fechaFinal: "19:00",
       date: "12/09/2022 00:00", 
       monitor: ["Miguel Goyena","Lucía Rodriguez"], 
       type: "Pilates"

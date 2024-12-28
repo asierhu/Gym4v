@@ -2,7 +2,9 @@
 export class Activity {
 
     // Atributos
-    horario: string;
+    id: number = 0;
+    fechaInicio: string;
+    fechaFinal: string;
     date: string;
     monitor: string[];
     type: string;
@@ -10,8 +12,10 @@ export class Activity {
     // Constructor sin ningun atributo para cuando la actividad está vacía
 
     // Constructor con todos los atributos
-    constructor(horario: string, date: string, monitor: string[], type: string) {
-        this.horario = horario;
+    constructor(id:number, fechaInicio: string, fechaFinal: string, date: string, monitor: string[], type: string) {
+        this.id = id;
+        this.fechaInicio = fechaInicio;
+        this.fechaFinal = fechaFinal;
         this.date = date;
         this.monitor = monitor;
         this.type = type;
