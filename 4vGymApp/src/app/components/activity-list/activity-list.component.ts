@@ -1,8 +1,8 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ActivityComponent } from '../activity/activity.component';
 import { Activity } from '../../models/activity';
 import { ActivityService } from '../../services/activity.service';
+import { ActivityPopUpComponent } from '../activity-pop-up/activity-pop-up.component';
 
 @Component({
   selector: 'app-activity-list',
@@ -29,4 +29,6 @@ throw new Error('Method not implemented.');
   ngOnInit(): void {
     this.actividades = this.actividadService.getActividades();
   }
+
+
 }

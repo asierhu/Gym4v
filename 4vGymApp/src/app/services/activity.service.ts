@@ -14,7 +14,8 @@ export class ActivityService {
       fechaFinal: "11:30",
       date: "10/08/2014 00:00", 
       monitor: ["Miguel Goyena"], 
-      type: "bodypump"
+      type: "bodypump",
+      isAvailable: false
     },
 
     { 
@@ -23,7 +24,8 @@ export class ActivityService {
       fechaFinal: "15:00",
       date: "12/09/2022 00:00", 
       monitor: [], 
-      type: "free"
+      type: "",
+      isAvailable: true
     },
 
     { 
@@ -32,7 +34,8 @@ export class ActivityService {
       fechaFinal: "19:00",
       date: "12/09/2022 00:00", 
       monitor: ["Miguel Goyena","Lucía Rodriguez"], 
-      type: "pilates"
+      type: "pilates",
+      isAvailable: false
     }
   ];
 

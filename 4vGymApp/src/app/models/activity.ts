@@ -8,16 +8,18 @@ export class Activity {
     date: string;
     monitor: string[];
     type: string;
+    isAvailable: boolean = false;
 
     // Constructor sin ningun atributo para cuando la actividad está vacía
 
     // Constructor con todos los atributos
-    constructor(id:number, fechaInicio: string, fechaFinal: string, date: string, monitor: string[], type: string) {
+    constructor(id:number, fechaInicio: string, fechaFinal: string, date: string, monitor: string[], type: string, isAvailable: boolean) {
         this.id = id;
         this.fechaInicio = fechaInicio;
         this.fechaFinal = fechaFinal;
         this.date = date;
         this.monitor = monitor;
         this.type = type;
+        this.isAvailable = isAvailable;
     }
 }

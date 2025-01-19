@@ -11,8 +11,8 @@
         <!-- Card (Columna Derecha) -->
         <div class="col-md-9">
             <div class="d-flex align-items-center justify-content-between p-3" [ngClass]="{
-            'bg-light': activity.type.toLowerCase() !== 'free',
-            'bg-success text-white': activity.type.toLowerCase() === 'free'
+            'bg-light': activity.isAvailable === false,
+            'bg-success text-white': activity.isAvailable === true
             }">
                 <!-- Interior dividido en cuatro columnas -->
                 <div class="row w-100">
@@ -65,8 +65,8 @@
                         </div>
 
                         <!-- Actions -->
-                        <div *ngIf="activity.type.toLowerCase() == 'free'">
-                            <svg width="60" height="60" viewBox="0 0 60 60" fill="none" (click)="addActivity()"
+                        <div *ngIf="activity.isAvailable == true">
+                            <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_6_10100)">
                                     <path
@@ -80,7 +80,7 @@
                                 </defs>
                             </svg>
                         </div>
-                        <div *ngIf="activity.type.toLowerCase() != 'free'">
+                        <div *ngIf="activity.isAvailable == false">
                             <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
                                 xmlns="http://www.w3.org/2000/svg" (click)="deleteActivity(activity.id)">
                                 <path

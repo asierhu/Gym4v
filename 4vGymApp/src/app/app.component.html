@@ -11,10 +11,16 @@
                 <app-calendar></app-calendar>
             </div>
             <div class="col-8">
+                <app-date-picker 
+                    [selectedDate]="currentDate" 
+                    (dateChanged)="onDateChange($event)">
+                </app-date-picker>
+
+
                 <app-activity-list></app-activity-list>
             </div>
         </div>
-        
+         
         
     </div>
 

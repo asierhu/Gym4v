@@ -6,11 +6,12 @@ import { ModeSelectorComponent } from "./components/mode-selector/mode-selector.
 import { CalendarComponent } from "./components/calendar/calendar.component";
 import { ActivityListComponent } from "./components/activity-list/activity-list.component";
 import { CarrouselComponent } from "./components/carrousel/carrousel.component";
+import { DatePickerComponent } from "./components/date-picker/date-picker.component";
 
 
 @Component({
   selector: 'app-root',
-  imports: [NavbarComponent, CommonModule, ModeSelectorComponent, CalendarComponent, ActivityListComponent, CarrouselComponent],
+  imports: [NavbarComponent, CommonModule, ModeSelectorComponent, CalendarComponent, ActivityListComponent, CarrouselComponent, DatePickerComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -23,5 +24,14 @@ export class AppComponent {
   // Actualizar la opción actual según el evento recibido
   onOptionSelected(option: string) {
     this.currentOption = option;
+  }
+
+
+  currentDate: Date = new Date(); // Fecha actual seleccionada
+
+  // Método para manejar cambios de fecha
+  onDateChange(newDate: Date): void {
+    this.currentDate = newDate;
+    console.log('Fecha seleccionada:', newDate); // Aquí actualizas la lógica según la fecha seleccionada
   }
 }

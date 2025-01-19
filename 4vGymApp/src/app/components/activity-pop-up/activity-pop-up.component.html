@@ -1,1 +1,67 @@
-<p>activity-pop-up works!</p>
+<div
+  class="modal fade"
+  id="addActivityModal"
+  tabindex="-1"
+  aria-labelledby="addActivityModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="addActivityModalLabel">Añadir Actividad</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <!-- Selector Tipo Actividad -->
+          <div class="mb-3">
+            <label for="activityType" class="form-label">Tipo Actividad</label>
+            <select class="form-select" id="activityType">
+              <option selected>Selecciona una actividad</option>
+              <option value="1">Yoga</option>
+              <option value="2">Spinning</option>
+              <option value="3">CrossFit</option>
+            </select>
+          </div>
+
+          <!-- Selector Monitor 1 -->
+          <div class="mb-3">
+            <label for="monitor1" class="form-label">Monitor 1</label>
+            <select class="form-select" id="monitor1">
+              <option selected>Selecciona un monitor</option>
+              <option value="1">Miguel Goyena</option>
+              <option value="2">Lucia Rodríguez</option>
+            </select>
+          </div>
+
+          <!-- Selector Monitor N -->
+          <div class="mb-3">
+            <label for="monitorN" class="form-label">Monitor N</label>
+            <select class="form-select" id="monitorN">
+              <option selected>Selecciona otro monitor</option>
+              <option value="1">Carlos Pérez</option>
+              <option value="2">Ana Torres</option>
+            </select>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer d-flex justify-content-between">
+        <button type="button" class="btn btn-danger" (click)="onAccept()">
+          ACEPTAR
+        </button>
+        <button
+          type="button"
+          class="btn btn-secondary"
+          data-bs-dismiss="modal"
+        >
+          CANCELAR
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
