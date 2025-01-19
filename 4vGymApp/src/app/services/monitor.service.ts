@@ -74,8 +74,8 @@ export class MonitorService {
     }
   ];
 
-  // Creamos un método para devolver todas las actividades
-  getActividades(): Monitor[] {
+  // Creamos un método para devolver todos los monitores
+  getMonitores(): Monitor[] {
     return this.monitores;
   }
   constructor() { }

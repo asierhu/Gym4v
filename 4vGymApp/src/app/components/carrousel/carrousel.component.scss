@@ -1,0 +1,15 @@
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+
+    &.carousel-control-prev {
+        left: -75px; // Ajusta el valor para mover la flecha a la izquierda
+    }
+
+    &.carousel-control-next {
+        right: -75px; // Ajusta el valor para mover la flecha a la derecha
+    }
+}
