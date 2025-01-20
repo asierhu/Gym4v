@@ -7,8 +7,7 @@
         [class.active]="i === 0"
       >
         <div class="row">
-          <!-- Loop through monitors within each group -->
-          <div class="col-6 col-md-4 col-lg-3  justify-content-center" *ngFor="let monitor of group">
+          <div class="col justify-content-center" *ngFor="let monitor of group">
             <app-carrousel-card [name]="monitor.name" [email]="monitor.email" [tel]="monitor.tel"></app-carrousel-card>
           </div>
         </div>

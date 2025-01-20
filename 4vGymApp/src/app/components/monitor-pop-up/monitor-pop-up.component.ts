@@ -7,5 +7,18 @@ import { Component } from '@angular/core';
   styleUrl: './monitor-pop-up.component.scss'
 })
 export class MonitorPopUpComponent {
+  user = {
+    nombre: '',
+    email: '',
+    telefono: '',
+  };
 
+  onSubmit() {
+    console.log('Formulario enviado:', this.user);
+  }
+
+  onCancel() {
+    console.log('Formulario cancelado');
+    this.user = { nombre: '', email: '', telefono: '' };
+  }
 }

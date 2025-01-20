@@ -7,11 +7,12 @@ import { CalendarComponent } from "./components/calendar/calendar.component";
 import { ActivityListComponent } from "./components/activity-list/activity-list.component";
 import { CarrouselComponent } from "./components/carrousel/carrousel.component";
 import { DatePickerComponent } from "./components/date-picker/date-picker.component";
+import { MonitorPopUpComponent } from "./components/monitor-pop-up/monitor-pop-up.component";
 
 
 @Component({
   selector: 'app-root',
-  imports: [NavbarComponent, CommonModule, ModeSelectorComponent, CalendarComponent, ActivityListComponent, CarrouselComponent, DatePickerComponent],
+  imports: [NavbarComponent, CommonModule, ModeSelectorComponent, CalendarComponent, ActivityListComponent, CarrouselComponent, DatePickerComponent, MonitorPopUpComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
