@@ -1,0 +1,42 @@
+$input-background: #d3d3d3;
+$border-color: #e74c3c;    
+$text-color: #333;         
+$placeholder-color: #666;  
+$font-size: 16px;           
+$border-radius: 5px;        
+$height: 55px;              
+$padding-left: 10px;        
+
+input[type="text"] {
+  background-color: $input-background;
+  border: 2px solid $border-color;
+  border-radius: $border-radius;
+  height: $height;
+  width: 100%;
+  padding-left: $padding-left;
+  font-size: $font-size;
+  color: $text-color;
+  border-left: 0px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  &::placeholder {
+    color: $placeholder-color;
+    font-style: italic;
+  }
+}
+span{
+  background-color: $input-background;
+  border: 2px solid $border-color;
+  border-radius: $border-radius;
+  height: $height;
+  border-right: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+i{
+
+  color: #D25B5B;
+  height: $height - 10px;
+  font-size: $height - 20px;
+  width: $height - 10px;
+}

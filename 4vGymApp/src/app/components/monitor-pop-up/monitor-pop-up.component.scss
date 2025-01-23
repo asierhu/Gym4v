@@ -1,0 +1,36 @@
+// Variables de colores
+$primary-color: #D25B5B;
+$primary-color-hover: #C14646;
+$secondary-color: #e4e4e4;
+$placeholder-color: #aaa;
+
+// Estilos principales
+.popup-monitor {
+  background-color: rgba(0, 0, 0, 0.5); // Fondo oscuro
+
+  .card {
+    border: none;
+  }
+
+  input::placeholder {
+    font-style: italic;
+    color: $placeholder-color;
+  }
+
+  // Botones
+  .btn-danger {
+    background-color: $primary-color;
+    border-color: $primary-color;
+
+    &:hover {
+      background-color: $primary-color-hover;
+      border-color: $primary-color-hover;
+    }
+  }
+
+  .btn-outline-secondary {
+    &:hover {
+      background-color: $secondary-color;
+    }
+  }
+}

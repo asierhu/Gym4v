@@ -26,8 +26,22 @@
 
     <!-- If currentOption is 'monitores', show the calendar -->
     <div *ngIf="currentOption === 'monitores'">
-        <app-monitor-pop-up></app-monitor-pop-up>
-        <app-carrousel></app-carrousel>
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-7 align-items-end">
+                <app-search-monitor></app-search-monitor>
+            </div>
+            <div class="col-1"></div>
+            <div class="col-2 align-items-end">
+                <app-boton-popup></app-boton-popup>
+            </div>
+        </div>
+        
+        <app-monitor-pop-up hidden="{{popUpHidden}}"></app-monitor-pop-up>
+        
+        @if (groupedMonitores.length!=0) {
+            <app-carrousel [groupedMonitores]="groupedMonitores"></app-carrousel>
+        }
     </div>
 </div>
 

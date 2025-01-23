@@ -74,9 +74,11 @@ export class MonitorService {
     }
   ];
 
-  // Creamos un método para devolver todos los monitores
   getMonitores(): Monitor[] {
     return this.monitores;
+  }
+  getMonitoresByName(name: string): Monitor[] {
+    return this.monitores.filter(monitor => monitor.name.toLowerCase().includes(name.toLowerCase()));
   }
   constructor() { }
 }
