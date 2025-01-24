@@ -20,6 +20,10 @@ import { Monitor } from './models/monitor';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
+  monitorCarrouselListEmit(event: Monitor[][]) {
+    this.groupedMonitores = event;
+  }
+
   title = '4vGymApp';
   groupedMonitores: Monitor [][]=[];
   // Opción actual seleccionada
