@@ -1,29 +1,38 @@
-<div id="popup-container" class="popup-monitor d-flex justify-content-center align-items-center vh-100">
-  <div class="card p-4 shadow-lg rounded-4" style="width: 350px; background-color: #fff;">
-    <div class="text-center mb-4">
-      <div class="position-relative d-inline-block">
-        <svg width="150" height="150" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12.5 150C12.5 150 0 150 0 137.5C0 125 12.5 87.5 75 87.5C137.5 87.5 150 125 150 137.5C150 150 137.5 150 137.5 150H12.5ZM75 75C84.9456 75 94.4839 71.0491 101.517 64.0165C108.549 56.9839 112.5 47.4456 112.5 37.5C112.5 27.5544 108.549 18.0161 101.517 10.9835C94.4839 3.95088 84.9456 0 75 0C65.0544 0 55.5161 3.95088 48.4835 10.9835C41.4509 18.0161 37.5 27.5544 37.5 37.5C37.5 47.4456 41.4509 56.9839 48.4835 64.0165C55.5161 71.0491 65.0544 75 75 75Z" fill="#D25B5B"/>
-          </svg>
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M10.125 22C10.125 22.4973 10.3225 22.9742 10.6742 23.3258C11.0258 23.6775 11.5027 23.875 12 23.875C12.4973 23.875 12.9742 23.6775 13.3258 23.3258C13.6775 22.9742 13.875 22.4973 13.875 22V13.875H22C22.4973 13.875 22.9742 13.6775 23.3258 13.3258C23.6775 12.9742 23.875 12.4973 23.875 12C23.875 11.5027 23.6775 11.0258 23.3258 10.6742C22.9742 10.3225 22.4973 10.125 22 10.125H13.875V2C13.875 1.50272 13.6775 1.02581 13.3258 0.674175C12.9742 0.322544 12.4973 0.125 12 0.125C11.5027 0.125 11.0258 0.322544 10.6742 0.674175C10.3225 1.02581 10.125 1.50272 10.125 2V10.125H2C1.50272 10.125 1.02581 10.3225 0.674175 10.6742C0.322544 11.0258 0.125 11.5027 0.125 12C0.125 12.4973 0.322544 12.9742 0.674175 13.3258C1.02581 13.6775 1.50272 13.875 2 13.875H10.125V22Z" fill="#D25B5B"/>
-            </svg>                     
-      </div>
+<div class="modal-dialog modal-dialog-centered">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="popupModalLabel">Nuevo Monitor</h5>
     </div>
-    <form (ngSubmit)="onSubmit()">
-      <div class="mb-3">
-        <input type="text" id="nombre" name="nombre" placeholder="Nombre" class="form-control rounded-3" required />
+    <div class="modal-body">
+      <div class="text-center mb-4">
+        <div class="position-relative d-inline-block">
+          <svg width="150" height="150" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12.5 150C12.5 150 0 150 0 137.5C0 125 12.5 87.5 75 87.5C137.5 87.5 150 125 150 137.5C150 150 137.5 150 137.5 150H12.5ZM75 75C84.9456 75 94.4839 71.0491 101.517 64.0165C108.549 56.9839 112.5 47.4456 112.5 37.5C112.5 27.5544 108.549 18.0161 101.517 10.9835C94.4839 3.95088 84.9456 0 75 0C65.0544 0 55.5161 3.95088 48.4835 10.9835C41.4509 18.0161 37.5 27.5544 37.5 37.5C37.5 47.4456
+              41.4509 56.9839 48.4835 64.0165C55.5161 71.0491 65.0544 75 75 75Z" fill="#D25B5B" />
+          </svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M10.125 22C10.125 22.4973 10.3225 22.9742 10.6742 23.3258C11.0258 23.6775 11.5027 23.875 12 23.875C12.4973 23.875 12.9742 23.6775 13.3258 23.3258C13.6775 22.9742 13.875 22.4973 13.875 22V13.875H22C22.4973 13.875 22.9742 13.6775 23.3258 13.3258C23.6775 12.9742 23.875 12.4973 23.875 12C23.875 11.5027 23.6775 11.0258 23.3258 10.6742C22.9742 10.3225 22.4973 10.125 22 10.125H13.875V2C13.875 1.50272 13.6775 1.02581 13.3258 0.674175C12.9742 0.322544 12.4973 0.125 12 0.125C11.5027 0.125 11.0258 0.322544 10.6742 0.674175C10.3225 1.02581 10.125 1.50272 10.125 2V10.125H2C1.50272 10.125 1.02581 10.3225 0.674175 10.6742C0.322544 11.0258 0.125 11.5027 0.125 12C0.125 12.4973 0.322544 12.9742 0.674175 13.3258C1.02581 13.6775 1.50272 13.875 2 13.875H10.125V22Z"
+              fill="#D25B5B" />
+          </svg>
+        </div>
       </div>
-      <div class="mb-3">
-        <input type="email" id="email" name="email" placeholder="Email" class="form-control rounded-3" required />
-      </div>
-      <div class="mb-3">
-        <input type="text" id="telefono" name="telefono" placeholder="Teléfono" class="form-control rounded-3" required />
-      </div>
-      <div class="d-flex justify-content-between">
-        <button type="submit" class="btn btn-danger rounded-3 px-4">Aceptar</button>
-        <button type="button" class="btn btn-outline-secondary rounded-3 px-4" (click)="onCancel()">Cancelar</button>
-      </div>
-    </form>
+      <form>
+        <div class="mb-3">
+          <input type="text" id="nombre" name="nombre" placeholder="Nombre" value="{{monitorName}}" [(ngModel)]="monitorName" class="form-control rounded-3" />
+        </div>
+        <div class="mb-3">
+          <input type="email" id="email" name="email" placeholder="Email" value="{{monitorEmail}}" [(ngModel)]="monitorEmail" class="form-control rounded-3" />
+        </div>
+        <div class="mb-3">
+          <input type="text" id="telefono" name="telefono" placeholder="Teléfono" value="{{monitorTel}}" [(ngModel)]="monitorTel" class="form-control rounded-3" />
+        </div>
+        <div class="d-flex justify-content-between">
+          <button (click)="btnAccept()" class="btn btn-danger rounded-3 px-4">Aceptar</button>
+          <button type="button" class="btn btn-outline-secondary rounded-3 px-4"
+            data-bs-dismiss="modal">Cancelar</button>
+        </div>
+      </form>
+    </div>
   </div>
 </div>

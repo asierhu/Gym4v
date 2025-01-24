@@ -13,6 +13,7 @@ export class MonitorService {
       name: "Miguel Goyena",
       email: "miguel_goyena@cuatrotientos.org",
       tel: "123456789",
+      fechaInicio: "10/08/2014 00:00",
     },
 
     { 
@@ -21,6 +22,7 @@ export class MonitorService {
       name: "Aitor Lopez",
       email: "aitor_lopez@cuatrotientos.org",
       tel: "234567890",
+      fechaInicio: "10/08/2014 00:00",
     },
 
     { 
@@ -29,6 +31,7 @@ export class MonitorService {
       name: "Asier Huarte",
       email: "asier_huarte@cuatrotientos.org",
       tel: "345678901",
+      fechaInicio: "10/08/2014 00:00",
     },
     { 
       id: 4,
@@ -36,6 +39,7 @@ export class MonitorService {
       name: "Miguel Lopez",
       email: "miguel_lopez@cuatrotientos.org",
       tel: "456789012",
+      fechaInicio: "10/08/2014 00:00",
     },
     { 
       id: 5,
@@ -43,6 +47,7 @@ export class MonitorService {
       name: "Aitor Huarte",
       email: "aitor_huarte@cuatrotientos.org",
       tel: "567890123",
+      fechaInicio: "10/08/2014 00:00",
     },
     { 
       id: 6,
@@ -50,6 +55,7 @@ export class MonitorService {
       name: "Asier Goyena",
       email: "asier_goyena@cuatrotientos.org",
       tel: "678901234",
+      fechaInicio: "10/08/2014 00:00",
     },
     { 
       id: 7,
@@ -57,6 +63,7 @@ export class MonitorService {
       name: "Miguel Huarte",
       email: "miguel_huarte@cuatrotientos.org",
       tel: "789012345",
+      fechaInicio: "10/08/2014 00:00",
     },
     { 
       id: 8,
@@ -64,6 +71,7 @@ export class MonitorService {
       name: "Aitor Goyena",
       email: "aitor_goyena@cuatrotientos.org",
       tel: "890123456",
+      fechaInicio: "10/08/2014 00:00",
     },
     { 
       id: 9,
@@ -71,6 +79,7 @@ export class MonitorService {
       name: "Asier Lopez",
       email: "asier_lopez@cuatrotientos.org",
       tel: "901234567",
+      fechaInicio: "10/08/2014 00:00",
     }
   ];
 
@@ -79,6 +88,12 @@ export class MonitorService {
   }
   getMonitoresByName(name: string): Monitor[] {
     return this.monitores.filter(monitor => monitor.name.toLowerCase().includes(name.toLowerCase()));
+  }
+  postMonitor(newMonitor: Monitor){
+    this.monitores.push(newMonitor);
+  }
+  postMonitorAutoIncrement(name: string, email: string, tel: string, fechaInicio: string, img: string){
+    this.monitores.push(new Monitor(this.monitores.length + 1,name, email, tel, fechaInicio, img));
   }
   constructor() { }
 }

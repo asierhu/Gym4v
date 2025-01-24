@@ -7,13 +7,16 @@ export class Monitor {
     name: string;
     email: string;
     tel: string;
+    fechaInicio: string;
 
     // Constructor con todos los atributos
-    constructor(id:number, img: string, name: string, email: string, tel: string, fechaInicio: string) {
+    constructor(id:number, name: string,  email: string, tel: string, fechaInicio: string, img: string) {
         this.id = id;
         this.img = img;
         this.name = name;
         this.email = email;
         this.tel = tel;
+        this.fechaInicio = fechaInicio;
+
     }
 }
