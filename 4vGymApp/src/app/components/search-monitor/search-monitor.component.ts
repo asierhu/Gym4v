@@ -1,8 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormControl, FormsModule } from '@angular/forms';
 import { Monitor } from '../../models/monitor';
-import { MonitorService } from '../../services/monitor.service';
-import { CarrouselComponent } from "../carrousel/carrousel.component";
 
 @Component({
   selector: 'app-search-monitor',
@@ -14,7 +12,7 @@ export class SearchMonitorComponent {
   monitores: Monitor[] = [];
   buscar: string='';
   groupedMonitores: Monitor[][] = [];
-  constructor(private monitorService: MonitorService) {}
+
   @Output() monitorCarrouselList = new EventEmitter<string>();
 
   onInputChange(event: Event): void {

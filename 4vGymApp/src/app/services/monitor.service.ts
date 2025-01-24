@@ -95,5 +95,8 @@ export class MonitorService {
   postMonitorAutoIncrement(name: string, email: string, tel: string, fechaInicio: string, img: string){
     this.monitores.push(new Monitor(this.monitores.length + 1,name, email, tel, fechaInicio, img));
   }
+  deleteMonitor(id: number){
+    this.monitores = this.monitores.splice(id - 1, 1);
+  }
   constructor() { }
 }

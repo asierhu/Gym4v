@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MonitorService } from '../../services/monitor.service';
 import { Monitor } from '../../models/monitor';
@@ -10,9 +10,9 @@ import { Monitor } from '../../models/monitor';
   styleUrl: './monitor-pop-up.component.scss'
 })
 export class MonitorPopUpComponent {
-  monitorName: any;
-  monitorEmail: any;
-  monitorTel: any;
+  @Input() monitorName: string ='';
+  @Input() monitorEmail: string='';
+  @Input() monitorTel:   string='';
 
   btnAccept() {
     if (this.monitorName == '' || this.monitorTel == '' || this.monitorEmail == '') {
