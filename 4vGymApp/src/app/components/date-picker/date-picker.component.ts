@@ -2,13 +2,13 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-date-picker',
-  imports: [],
   templateUrl: './date-picker.component.html',
-  styleUrl: './date-picker.component.scss'
+  styleUrls: ['./date-picker.component.scss']
 })
 export class DatePickerComponent {
   @Input() selectedDate: Date = new Date();
   @Output() dateChanged: EventEmitter<Date> = new EventEmitter<Date>();
+
 
   // Navegar al día anterior
   goToPreviousDay(): void {
@@ -39,11 +39,11 @@ export class DatePickerComponent {
   // Formatear fecha para mostrar en pantalla
   formatDate(date: Date): string {
     const options: Intl.DateTimeFormatOptions = { day: 'numeric', month: 'long', year: 'numeric' };
-    return new Intl.DateTimeFormat('es-ES', options).format(date); // Formato español
+    return new Intl.DateTimeFormat('es-ES', options).format(date);
   }
 
   // Formatear fecha para el input de tipo date
   formatDateForInput(date: Date): string {
-    return date.toISOString().split('T')[0]; // Formato 'yyyy-MM-dd'
+    return date.toISOString().split('T')[0];
   }
 }

@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatCardModule } from '@angular/material/card';
+import { Input } from '@angular/core';
 
 import {provideNativeDateAdapter} from '@angular/material/core';
 
@@ -17,9 +18,16 @@ export class CalendarComponent {
   // Propiedad para la fecha seleccionada
   selectedDate: Date | null = null; // Inicializa la variable
 
+  @Output() dateConfirmed = new EventEmitter<Date>();
+
   // Método opcional para depuración
-  onDateSelected(event: Date) {
-    this.selectedDate = event;
-    console.log('Fecha seleccionada:', this.selectedDate);
+  confirmDate() {
+    if (this.selectedDate) {
+      this.dateConfirmed.emit(this.selectedDate);
+    }
+  }
+
+  clearDate() {
+    this.selectedDate = null;
   }
 }

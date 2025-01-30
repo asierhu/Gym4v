@@ -8,7 +8,7 @@
     <div *ngIf="currentOption === 'actividades'">
         <div class="row">
             <div class="col-4">
-                <app-calendar></app-calendar>
+                <app-calendar  (dateConfirmed)="onDateChange($event)"></app-calendar>
             </div>
             <div class="col-8">
                 <app-date-picker 
@@ -17,7 +17,7 @@
                 </app-date-picker>
 
 
-                <app-activity-list></app-activity-list>
+                <app-activity-list [selectedDate]="currentDate"></app-activity-list>
             </div>
         </div>
          
