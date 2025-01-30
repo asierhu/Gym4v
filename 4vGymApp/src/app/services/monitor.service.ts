@@ -96,7 +96,23 @@ export class MonitorService {
     this.monitores.push(new Monitor(this.monitores.length + 1,name, email, tel, fechaInicio, img));
   }
   deleteMonitor(id: number){
-    this.monitores = this.monitores.splice(id - 1, 1);
+    this.monitores.splice(id - 1, 1);
   }
-  constructor() { }
+  editMonitor(monitor: Monitor){ {
+    const index = this.monitores.findIndex(monitor => monitor.id === monitor.id);
+    if (index !== -1) {
+      this.monitores[index] = { 
+        id: monitor.id,
+        img:"",
+        name: monitor.name,
+        email: monitor.email,
+        tel: monitor.tel,
+        fechaInicio: "10/08/2014 00:00",
+       };
+      }
+    }
+  }
+  constructor() { 
+
+  }
 }

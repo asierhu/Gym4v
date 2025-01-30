@@ -14,6 +14,5 @@ import { CommonModule } from '@angular/common';
 export class CarrouselComponent{
 
   @Input() groupedMonitores: Monitor[][] = []; // Lista de monitores para el carrousel: ; // Grupos de monitores para cada slide
-
-
+  @Input() service: MonitorService = new MonitorService();
 }

@@ -8,7 +8,7 @@ import { ActivityListComponent } from "./components/activity-list/activity-list.
 import { CarrouselComponent } from "./components/carrousel/carrousel.component";
 import { DatePickerComponent } from "./components/date-picker/date-picker.component";
 import { MonitorPopUpComponent } from "./components/monitor-pop-up/monitor-pop-up.component";
-import { BotonPopupComponent } from "./boton-popup/boton-popup.component";
+import { BotonPopupComponent } from "./components/boton-popup/boton-popup.component";
 import { SearchMonitorComponent } from "./components/search-monitor/search-monitor.component";
 import { Monitor } from './models/monitor';
 import { MonitorService } from './services/monitor.service';
@@ -21,7 +21,7 @@ import { MonitorService } from './services/monitor.service';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  constructor(private monitorService: MonitorService) {}
+  constructor(public monitorService: MonitorService) {}
   monitores: Monitor[] = [];
   title = '4vGymApp';
   groupedMonitores: Monitor [][]=[];
@@ -65,4 +65,5 @@ export class AppComponent {
     this.currentDate = newDate;
     console.log('Fecha seleccionada:', newDate); // Aquí actualizas la lógica según la fecha seleccionada
   }
+  
 }
