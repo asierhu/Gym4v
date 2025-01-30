@@ -8,7 +8,7 @@
       >
         <div class="row">
           <div class="col justify-content-center" *ngFor="let monitor of group">
-            <app-carrousel-card [name]="monitor.name" [email]="monitor.email" [tel]="monitor.tel" [id]="monitor.id" [service]="service"></app-carrousel-card>
+            <app-carrousel-card (monitorEdited)="onMonitorEdited($event)" [name]="monitor.name" [email]="monitor.email" [tel]="monitor.tel" [id]="monitor.id" [service]="service"></app-carrousel-card>
           </div>
         </div>
       </div>
@@ -41,4 +41,7 @@
             </defs>
         </svg>
     </button>
+</div>
+<div class="modal fade" id="editar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <app-editar-popup [id]="id" [service]="service"></app-editar-popup>
 </div>

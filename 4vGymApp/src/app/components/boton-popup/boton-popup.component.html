@@ -1,4 +1,4 @@
-<button (click)="editarAnyadir()" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+<button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
     <ng-container *ngIf="anyadir; else elseBlock">
         <svg width="140" height="140" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_6_10329)">
@@ -23,6 +23,10 @@
     </ng-template>
 </button>
 
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <app-monitor-pop-up [anyadir]="anyadir" [id]="id" [service]="service" (monitorAdded)="onMonitorAdded($event)"></app-monitor-pop-up>
-</div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <app-monitor-pop-up [id]="id" [service]="service" (monitorAdded)="onMonitorAdded($event)"></app-monitor-pop-up>
+    </div>
+
+
+

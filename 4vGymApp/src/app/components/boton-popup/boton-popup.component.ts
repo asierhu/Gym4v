@@ -3,17 +3,16 @@ import { MonitorPopUpComponent } from "../monitor-pop-up/monitor-pop-up.componen
 import { Monitor } from '../../models/monitor';
 import { MonitorService } from '../../services/monitor.service';
 import { CommonModule } from '@angular/common';
+import { EditarPopupComponent } from "../editar-popup/editar-popup.component";
 
 @Component({
   selector: 'app-boton-popup',
-  imports: [CommonModule, MonitorPopUpComponent],
+  imports: [CommonModule, MonitorPopUpComponent, EditarPopupComponent],
   templateUrl: './boton-popup.component.html',
   styleUrl: './boton-popup.component.scss'
 })
 export class BotonPopupComponent {
-  editarAnyadir() {
-    
-  }
+
   @Output() monitorAdded = new EventEmitter<Monitor>();
   @Input() name!: string;
   @Input() email!: string;

@@ -16,23 +16,13 @@ export class MonitorPopUpComponent {
   @Input() monitorEmail: string='';
   @Input() monitorTel:   string='';
   @Input() monitor:  Monitor = new Monitor(-1,'', '', '', '', '');
-  @Input() anyadir: boolean|undefined;
 
   btnAccept() {
-    if (this.anyadir) {
-      alert("No puedes editar un monitor");
-      this.service.editMonitor(new Monitor(3, this.monitorName, this.monitorEmail, this.monitorTel, '', ''));
+    if (this.monitorName == '' || this.monitorTel == '' || this.monitorEmail == '') {
+      alert("Tienes que rellenar todos los campos");
     }else{
-      if (this.monitorName == '' || this.monitorTel == '' || this.monitorEmail == '') {
-        alert("Tienes que rellenar todos los campos");
-      }else{
-        this.monitorAdded.emit(new Monitor(-1,this.monitorName, this.monitorEmail, this.monitorTel, '', ''));
-      }
-    }
-    
+      this.monitorAdded.emit(new Monitor(-1,this.monitorName, this.monitorEmail, this.monitorTel, '', ''));
+    }   
   }
   @Output() monitorAdded = new EventEmitter<Monitor>();
-  constructor() {
-    console.log("monitor popup "+ this.anyadir);
-  }
 }
