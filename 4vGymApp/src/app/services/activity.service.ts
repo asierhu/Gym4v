@@ -4,9 +4,10 @@ import { Activity } from '../models/activity';
 @Injectable({
   providedIn: 'root'
 })
-
 export class ActivityService {
-
+  updateActividad(actividad: Activity) {
+    throw new Error('Method not implemented.');
+  }
   private actividades: Activity[] = [
     { 
       id: 1,
@@ -17,7 +18,6 @@ export class ActivityService {
       type: "bodypump",
       isAvailable: false
     },
-
     { 
       id: 2,
       fechaInicio: "13:30",
@@ -27,7 +27,6 @@ export class ActivityService {
       type: "",
       isAvailable: true
     },
-
     { 
       id: 3,
       fechaInicio: "17:30",
@@ -37,7 +36,6 @@ export class ActivityService {
       type: "pilates",
       isAvailable: false
     },
-
     { 
       id: 4,
       fechaInicio: "17:30",
@@ -49,8 +47,14 @@ export class ActivityService {
     }
   ];
 
-  // Creamos un método para devolver todas las actividades
+  // Método para devolver todas las actividades
   getActividades(): Activity[] {
     return this.actividades;
+  }
+
+  // Método para agregar una nueva actividad
+  addActividad(nuevaActividad: Activity): void {
+    this.actividades.push(nuevaActividad);
+    console.log('Nueva actividad agregada:', nuevaActividad);
   }
 }

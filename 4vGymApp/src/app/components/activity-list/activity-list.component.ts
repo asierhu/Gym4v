@@ -2,10 +2,12 @@ import { Component, Input, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Activity } from '../../models/activity';
 import { ActivityService } from '../../services/activity.service';
+import { CreateActivityPopUpComponent } from "../create-activity-pop-up/create-activity-pop-up.component";
+import { EditActivityPopUpComponent } from "../edit-activity-pop-up/edit-activity-pop-up.component";
 
 @Component({
   selector: 'app-activity-list',
-  imports: [CommonModule],
+  imports: [CommonModule, CreateActivityPopUpComponent, EditActivityPopUpComponent],
   templateUrl: './activity-list.component.html',
   styleUrl: './activity-list.component.scss'
 })
